@@ -8,16 +8,36 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Splash"
+        android:id="@+id/textViewSpannable"
+        android:layout_width="0dp"
+        android:layout_height="181dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="127dp"
+        android:bufferType="spannable"
+        android:fontFamily="@font/pretendard_regular"
+        android:gravity="left"
+        android:text="찍어서\n먹는 습관을\n바르게"
         android:textColor="@color/white"
-        android:textSize="50sp"
+        android:textSize="45sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009" />
 
+    <ImageView
+        android:id="@+id/svgImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:gravity="left"
+        android:src="@drawable/splash_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.519" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
