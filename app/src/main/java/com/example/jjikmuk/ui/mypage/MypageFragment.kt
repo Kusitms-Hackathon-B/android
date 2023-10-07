@@ -96,60 +96,33 @@ class MypageFragment : BaseFragment<FragmentMypageBinding>(R.layout.fragment_myp
 
 
     private fun setupBarChart() {
-//        val entry1 = ArrayList<BarEntry>()
-//        val entry2 = ArrayList<BarEntry>()
-//
-//        entry1.add(BarEntry(10f,12f))
-//        entry1.add(BarEntry(1f,20f))
-//
-//        entry2.add(BarEntry(0f,30f))
-//        entry2.add(BarEntry(1f,24f))
-//
-//
-//        val graphArr = ArrayList<IBarDataSet>()
-//        val bds1 = BarDataSet(entry1, "Entry 1")
-//        bds1.color = ContextCompat.getColor(requireContext(), R.color.main_color)
-//
-//        val bds2 = BarDataSet(entry2, "Entry 2")
-//        bds2.color = ContextCompat.getColor(requireContext(), R.color.black)
-//
-//        graphArr.add(bds1)
-//        graphArr.add(bds2)
-//
-//        val datas = BarData(graphArr)
-//
-//        binding.chart.run {
-//            data = datas
-//            invalidate()
-//            groupBars(0.2f, 0.5f, 0.02f)
-//        }
         val entries1 = ArrayList<BarEntry>()
         val entries2 = ArrayList<BarEntry>()
         val entries3 = ArrayList<BarEntry>()
         
-        entries1.add(BarEntry(0f, 20f))
+        entries1.add(BarEntry(0f, 10f))
         entries1.add(BarEntry(1f, 30f))
         entries1.add(BarEntry(2f, 15f))
         entries1.add(BarEntry(3f, 15f))
-        entries1.add(BarEntry(4f, 15f))
-        entries1.add(BarEntry(5f, 15f))
-        entries1.add(BarEntry(6f, 15f))
+        entries1.add(BarEntry(4f, 7f))
+        entries1.add(BarEntry(5f, 65f))
+        entries1.add(BarEntry(6f, 35f))
 
         entries2.add(BarEntry(0f, 10f))
         entries2.add(BarEntry(1f, 25f))
         entries2.add(BarEntry(2f, 5f))
-        entries2.add(BarEntry(3f, 5f))
-        entries2.add(BarEntry(4f, 5f))
-        entries2.add(BarEntry(5f, 5f))
-        entries2.add(BarEntry(6f, 5f))
+        entries2.add(BarEntry(3f, 55f))
+        entries2.add(BarEntry(4f, 25f))
+        entries2.add(BarEntry(5f, 80f))
+        entries2.add(BarEntry(6f, 27f))
 
         entries3.add(BarEntry(0f, 44f))
         entries3.add(BarEntry(1f, 20f))
-        entries3.add(BarEntry(2f, 11f))
-        entries3.add(BarEntry(3f, 11f))
-        entries3.add(BarEntry(4f, 11f))
-        entries3.add(BarEntry(5f, 11f))
-        entries3.add(BarEntry(6f, 11f))
+        entries3.add(BarEntry(2f, 32f))
+        entries3.add(BarEntry(3f, 84f))
+        entries3.add(BarEntry(4f, 12f))
+        entries3.add(BarEntry(5f, 64f))
+        entries3.add(BarEntry(6f, 33f))
 
         val labels = ArrayList<String>()
         labels.add("월")

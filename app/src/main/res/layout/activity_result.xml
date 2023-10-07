@@ -19,8 +19,6 @@
                 android:layout_marginTop="18dp"
                 android:src="@drawable/group_17320"/>
 
-
-
             <ImageView
                 android:layout_width="28dp"
                 android:layout_height="28dp"
@@ -45,11 +43,9 @@
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="match_parent"
-                android:src="@drawable/bulgogi2"
                 android:layout_height="215dp"
+                android:src="@drawable/bulgogi2"
                 app:layout_constraintTop_toBottomOf="@+id/title"/>
-
-
 
             <TextView
                 android:id="@+id/subTitle"
@@ -63,7 +59,7 @@
                 android:textSize="20sp"
                 android:layout_marginTop="75dp"
                 android:textColor="#868686"
-                android:text="탄수화물, 단백질 부족해요 😓\n지방 충분해요 👍"/>
+                android:text="탄수화물, 단백질 부족해요\n지방 충분해요 "/>
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="0dp"
@@ -228,6 +224,4 @@
                 android:textSize="18sp"
                 android:fontFamily="@font/pretendard_semibold"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </layout>
