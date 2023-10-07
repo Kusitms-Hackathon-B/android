@@ -1,11 +1,13 @@
 package com.example.jjikmuk.ui
 
 import android.animation.LayoutTransition
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.lifecycleScope
+import com.airbnb.lottie.LottieAnimationView
 import com.example.jjikmuk.R
 import com.example.jjikmuk.databinding.FragmentHomeBinding
 import com.example.jjikmuk.model.InsufficientNutrientResponse
@@ -26,10 +28,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.home = this
+
         initRecyclerView()
 
         setupDietData()
         setNutrients()
+
+
     }
 
     private fun setNutrients(){
@@ -40,7 +45,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             ) {
                 val data = response.body()!!
 
-                binding.num1.text = data.nutrientInfoList[0].amount.toString() + "mg"
+                binding.loadingAnimation.apply {
+                    pauseAnimation()
+                    visibility = View.GONE
+                }
+
+                binding.num1.text = "+"+ data.nutrientInfoList[0].amount.toString() + "mg"
                 binding.name1.text = data.nutrientInfoList[0].name
                 binding.type1.text = if (data.nutrientInfoList[0].amount < 15.3) {
                     "부족해요"
@@ -51,7 +61,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                 }
 
                 binding.name2.text = response.body()!!.nutrientInfoList[1].name
-                binding.num2.text = response.body()!!.nutrientInfoList[1].amount.toString() + "g"
+                binding.num2.text = "-"+response.body()!!.nutrientInfoList[1].amount.toString() + "g"
                 binding.type2.text = if (data.nutrientInfoList[1].amount < 40.5) {
                     "부족해요"
                 } else if (data.nutrientInfoList[1].amount > 49.5) {
@@ -61,7 +71,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                 }
 
                 binding.name3.text = response.body()!!.nutrientInfoList[2].name
-                binding.num3.text = response.body()!!.nutrientInfoList[2].amount.toString() + "mg"
+                binding.num3.text = "-"+response.body()!!.nutrientInfoList[2].amount.toString() + "mg"
                 binding.type3.text = if (data.nutrientInfoList[2].amount < 8.1) {
                     "부족해요"
                 } else if (data.nutrientInfoList[2].amount > 9.9) {
@@ -70,6 +80,14 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                     "충분해요"
                 }
 
+                binding.num4.text = "+22.1g"
+                binding.type4.text = "충분해요"
+
+                binding.num5.text = "+1.2mg"
+                binding.type5.text = "충분해요"
+
+                binding.num6.text = "+181kcal"
+                binding.type6.text = "과해요"
 
                 binding.menu.text = response.body()!!.goodDietName
             }
