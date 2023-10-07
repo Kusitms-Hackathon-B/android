@@ -9,81 +9,44 @@
     tools:context=".ui.LoginActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:fontFamily="@font/pretendard_regular"
+        android:fontFamily="@font/pretendard_semibold"
+        android:text="찍먹과 함께\n우리 아이의, 그리고 나의\n영양 있는 식단을 유지해보아요!"
         android:textColor="#ffffff"
-        android:text="찍먹과 함께\n우리 아이의, 그리고 나의\n영양 있는 식단을 유지해보아요!"/>
 
-<!--    <Button-->
-<!--        android:id="@+id/btn_start_kakao_login"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_marginHorizontal="16dp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:backgroundTint="#f9e000"-->
-<!--        android:text="카카오 로그인"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="20dp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_kakao_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.488" />
 
-<!--    <Button-->
-<!--        android:id="@+id/btn_start_kakao_logout"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_marginHorizontal="16dp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:backgroundTint="#f9e000"-->
-<!--        android:text="카카오 로그아웃"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="20dp"-->
-<!--        android:textStyle="bold"-->
-<!--        android:visibility="gone"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btn_start_kakao_login" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btn_start_kakao_unlink"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_marginHorizontal="16dp"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:backgroundTint="#f9e000"-->
-<!--        android:text="카카오 연결끊기"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="20dp"-->
-<!--        android:textStyle="bold"-->
-<!--        android:visibility="gone"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btn_start_kakao_logout" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/tv_hashKey"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="16dp"-->
-<!--        android:text="text"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="14dp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btn_start_kakao_unlink" />-->
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="183dp"
+        android:src="@drawable/social_logo"
+        app:layout_constraintBottom_toTopOf="@+id/btn_kakao_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0" />
 
     <ImageView
         android:id="@+id/btn_kakao_login"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:src="@drawable/img_kakao_login"
-        android:layout_marginBottom="20dp"
         android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="56dp"
+        android:src="@drawable/img_kakao_login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
